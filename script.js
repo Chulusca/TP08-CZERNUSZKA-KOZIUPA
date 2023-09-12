@@ -37,5 +37,51 @@ function EJ3(){
 }
 
 function EJ4(){
+    const ciudad = new Object();
+    ciudad.nombre = prompt("Ingrese el nombre de la ciudad");
+    ciudad.fecha = new Date(prompt("Ingrese la fecha de creacion"));
+    ciudad.nombre = prompt("Ingrese la poblacion de la ciudad");
+    ciudad.extension = prompt("Ingrese el area de la ciudad");
 
+    let texto = "";
+    const resultado = document.getElementById("resultado");
+    for(const propiedad in ciudad){
+        texto += `${propiedad} : ${ciudad[propiedad]}`;
+    }
+    resultado.innerHTML = texto;
+}
+
+function EJ5(){
+    const resultadox = document.getElementById("resultado");
+    const numeros = [1,2,3,4,5]
+    const resultado = numeros.map(numero => numero * 2);
+    resultadox.innerHTML = resultado;
+}
+function EJ6(numPisos){
+    for (let i = 0; i < numPisos; i++) {
+        let piso = '';
+        for (let j = 0; j < i + 1; j++) {
+            piso = piso + '*';
+        }
+        console.log(piso)
+    }
+}
+function EJ6B(numPisos){
+    let piso;
+    let mitad;
+    if(numPisos % 2 == 0){
+        numPisos++;
+    }
+    for(let i  = 0; i < numPisos; i++){
+        piso.push("-");
+    }
+    mitad = (numPisos / 2) - 0,5;
+
+    for (let i = 0; i < numPisos; i++) {
+        let piso = '';
+        for (let j = 0; j < i + 1; j++) {
+            piso = piso + '*';
+        }
+        console.log(piso)
+    }
 }
