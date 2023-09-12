@@ -67,21 +67,20 @@ function EJ6(numPisos){
     }
 }
 function EJ6B(numPisos){
-    let piso;
+    debugger;
+    let piso = new Array();
     let mitad;
     if(numPisos % 2 == 0){
         numPisos++;
     }
-    for(let i  = 0; i < numPisos; i++){
-        piso.push("-");
+    for(let i  = 0; i < numPisos.lenght; i++){
+        piso[i] = "-";
     }
     mitad = (numPisos / 2) - 0,5;
 
-    for (let i = 0; i < numPisos; i++) {
-        let piso = '';
-        for (let j = 0; j < i + 1; j++) {
-            piso = piso + '*';
-        }
+    for (let i = 0; i < numPisos.lenght; i++) {
+        piso[mitad - i] = "*";
+        piso[mitad + i] = "*";
         console.log(piso)
     }
 }
