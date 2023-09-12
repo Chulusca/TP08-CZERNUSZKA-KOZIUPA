@@ -27,9 +27,15 @@ function tirandoFruta(){
         resultado.innerHTML = `No tenemos ${frutaIngresada}`;
     }
 }
+
 function EJ3(){
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = (10 === "10");
-    
+    resultado.innerHTML = (10 == "10"); //true
+    resultado.innerHTML = (10 === "10"); //false, cambia el tipo de dato
+    resultado.innerHTML = (typeof 10.6); //number
+    resultado.innerHTML = (1 === true); //false 
+}
+
+function EJ4(){
 
 }
